@@ -1,40 +1,34 @@
-document.addEventListener('DOMContentLoaded', async () => {
-    const searchInput = document.getElementById('searchInput');
-    const translationInput = document.getElementById('translationInput');
-    const results = document.getElementById('results');
+filteredData.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'result-item';
 
-    // Load Unicode data
-    const response = await fetch('unicodeData.json');
-    const unicodeData = await response.json();
+    const character = document.createElement('span');
+    character.className = 'character';
+    character.textContent = item.character;
 
-    searchInput.addEventListener('input', () => {
-        const query = searchInput.value.toLowerCase();
-        displayResults(unicodeData, query);
+    const meaning = document.createElement('span');
+    meaning.className = 'meaning';
+    meaning.textContent = item.meaning;
+
+    const tokens = document.createElement('span');
+    tokens.className = 'tokens';
+    tokens.textContent = `Tokens: ${item.tokens.join(', ')}`;
+
+    const similar = document.createElement('span');
+    similar.className = 'similar';
+    similar.textContent = "Similar: ";
+
+    item.similar.forEach(char => {
+        const similarChar = document.createElement('span');
+        similarChar.className = 'similar-character';
+        similarChar.textContent = char;
+        similar.appendChild(similarChar);
     });
 
-    translationInput.addEventListener('input', () => {
-        const query = translationInput.value.toLowerCase();
-        displayResults(unicodeData, query);
-    });
+    div.appendChild(character);
+    div.appendChild(meaning);
+    div.appendChild(tokens);
+    div.appendChild(similar);
 
-    function displayResults(data, query) {
-        results.innerHTML = '';
-        const filteredData = data.filter(item =>
-            item.character.toLowerCase().includes(query) ||
-            item.meaning.toLowerCase().includes(query) ||
-            item.tokens.some(token => token.includes(query))
-        );
-
-        filteredData.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'result-item';
-            div.innerHTML = `
-                <span class="character">${item.character}</span>
-                <span class="meaning">${item.meaning}</span>
-                <span class="tokens">Tokens: ${item.tokens.join(', ')}</span>
-                <span class="similar">Similar: ${item.similar.map(char => `<span class="similar-character">${char}</span>`).join(', ')}</span>
-            `;
-            results.appendChild(div);
-        });
-    }
+    results.appendChild(div);
 });
