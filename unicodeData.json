@@ -1,0 +1,62 @@
+[
+    {
+        "character": "😊",
+        "meaning": "Smiling Face with Smiling Eyes",
+        "tokens": ["happy", "joy", "smile"],
+        "similar": ["😀", "😃", "😄"]
+    },
+    {
+        "character": "😢",
+        "meaning": "Crying Face",
+        "tokens": ["sad", "cry", "tear"],
+        "similar": ["😭", "😢", "😞"]
+    },
+    {
+        "character": "😍",
+        "meaning": "Smiling Face with Heart-Eyes",
+        "tokens": ["love", "affection", "heart"],
+        "similar": ["😘", "😗", "😙"]
+    },
+    {
+        "character": "😀",
+        "meaning": "Grinning Face",
+        "tokens": ["grin", "smile", "happy"],
+        "similar": ["😊", "😃", "😄"]
+    },
+    {
+        "character": "😃",
+        "meaning": "Grinning Face with Big Eyes",
+        "tokens": ["excited", "happy", "eyes"],
+        "similar": ["😀", "😊", "😄"]
+    },
+    {
+        "character": "😄",
+        "meaning": "Grinning Face with Smiling Eyes",
+        "tokens": ["smile", "happy", "eyes"],
+        "similar": ["😀", "😊", "😃"]
+    },
+    {
+        "character": "😁",
+        "meaning": "Beaming Face with Smiling Eyes",
+        "tokens": ["beaming", "smile", "happy"],
+        "similar": ["😊", "😃", "😄"]
+    },
+    {
+        "character": "😆",
+        "meaning": "Grinning Squinting Face",
+        "tokens": ["laugh", "smile", "squint"],
+        "similar": ["😂", "😄", "😃"]
+    },
+    {
+        "character": "😅",
+        "meaning": "Grinning Face with Sweat",
+        "tokens": ["relieved", "sweat", "smile"],
+        "similar": ["😄", "😃", "😊"]
+    },
+    {
+        "character": "😂",
+        "meaning": "Face with Tears of Joy",
+        "tokens": ["tears", "joy", "laugh"],
+        "similar": ["😆", "😄", "😃"]
+    }
+]
